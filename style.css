@@ -1,0 +1,42 @@
+html{background: url(5.png) no-repeat;
+    background-size: cover;
+    font-family: fantasy;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.how_to{
+    color: #3d5c5c;
+    font: italic 28pt Constantia, fantasy;
+    text-shadow: 0px 1px 0px #c7c8ca, 0px 2px 0px #b1b3b6, 0px 3px 0px #9d9fa2, 0px 4px 0px #8a8c8e, 0px 5px 0px #77787b, 0px 6px 0px #636466, 0px 7px 0px #4d4d4f, 0px 8px 7px #001135;
+}
+ol{list-style-type:upper-roman;
+    font: bold 16pt Consolas, "Courier New", Courier, monospace;
+}
+ul{
+    color: rgb(0, 0, 0);list-style-type:square;
+}
+p{color: #3d5c5c;}
+.class{color: #ffffff;background-color: #c6d8eb;
+}
+.class{ 
+
+    width: 200px;
+    text-align: center;
+    border: 5px solid ;
+    margin:auto;
+    height: 40px;
+    padding: 0.0001em;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-auto-rows: minmax(1px,auto);
+    grid-gap: 15px;
+    width: 100%;
+    justify-content:left;
+    align-items: left;
+}
+#yes{
+    color: red;
+}
