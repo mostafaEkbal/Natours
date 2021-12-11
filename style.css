@@ -1,0 +1,13 @@
+body{
+    background-color: blueviolet;
+}
+div{
+    text-align: center;
+}
+#print1{
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.label{
+    font-size: medium;
+}
