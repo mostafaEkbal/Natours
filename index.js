@@ -1,6 +1,12 @@
-var myAge =window.prompt("Enter your age:");
-console.log("Happy birthday");
-myAge = Number(18);
-myAge +=1;
-console.log(typeof myAge);
-console.log(myAge);
+function printOnScreen(a,c){
+    document.getElementById(c).innerHTML = a;
+};
+
+printOnScreen("Mostafa","print1");
+
+function paramiterOfCercle(r){
+    return 2*3.14*r;
+};
+
+var cercle = paramiterOfCercle(5);
+printOnScreen("the Number is "+cercle,"print2")
