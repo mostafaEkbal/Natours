@@ -1,0 +1,66 @@
+.back-to-the-top {
+    position: relative;
+    
+    &__button {
+        background-color: $color-grey;
+        height: 7rem;
+        width: 7rem;
+        position: fixed;
+        border-radius: 50%;
+        bottom: 6rem;
+        right: 6rem;
+        z-index: 2000;
+        box-shadow: 0 1rem 3rem rgba($color-black, .1c);
+        text-align: center;
+        cursor: pointer;
+    }
+
+    &__icon {
+        position: relative;
+        margin-top: 3.5rem;
+
+        &,
+        &::before,
+        &::after {
+        width: 3rem;
+        height: 2px;
+        background-color: $color-grey-dark-2;
+        display: inline-block;
+        transition: all .2s;
+        
+        }
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: -2rem;
+        }
+
+        & {
+            transform: rotate(90deg);
+        }
+
+        &::before {
+            transform-origin: left;
+            transform: rotate(315deg);
+            margin: 1.2rem;
+        }
+
+        &::after {
+            transform: rotate(45deg);
+            margin-right: 1rem;
+            margin-left: 1rem;
+        }
+    }
+
+    &__button:hover &__icon {
+        transform: translatey(-.5rem) rotate(90deg);
+    }
+}
+
+
+.hide {
+    display: none;
+}
