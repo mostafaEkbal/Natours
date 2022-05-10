@@ -484,19 +484,18 @@ body {
       transition: all .2s; }
     .back-to-the-top__icon::after, .back-to-the-top__icon::before {
       content: '';
+      width: 2rem;
       position: absolute;
-      bottom: -1rem;
-      left: -2rem; }
+      top: 0;
+      left: 0; }
     .back-to-the-top__icon {
       transform: rotate(90deg); }
     .back-to-the-top__icon::before {
       transform-origin: left;
-      transform: rotate(315deg);
-      margin: 1.2rem; }
+      transform: rotate(45deg); }
     .back-to-the-top__icon::after {
-      transform: rotate(45deg);
-      margin-right: 1rem;
-      margin-left: 1rem; }
+      transform-origin: left;
+      transform: rotate(-45deg); }
   .back-to-the-top__button:hover .back-to-the-top__icon {
     transform: translatey(-0.5rem) rotate(90deg); }
 

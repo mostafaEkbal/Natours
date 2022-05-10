@@ -33,9 +33,10 @@
         &::after,
         &::before {
             content: '';
+            width: 2rem;
             position: absolute;
-            bottom: -1rem;
-            left: -2rem;
+            top: 0;
+            left: 0;
         }
 
         & {
@@ -44,14 +45,12 @@
 
         &::before {
             transform-origin: left;
-            transform: rotate(315deg);
-            margin: 1.2rem;
+            transform: rotate(45deg);   
         }
 
         &::after {
-            transform: rotate(45deg);
-            margin-right: 1rem;
-            margin-left: 1rem;
+            transform-origin: left;
+            transform: rotate(-45deg);  
         }
     }
 
