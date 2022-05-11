@@ -6,10 +6,11 @@ window.addEventListener('scroll', function() {
 });
 
 
-back_to_top.addEventListener('click', function() {
+back_to_top.addEventListener('click', function(e) {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
     });
+    e.preventDefault();
 }
 );
