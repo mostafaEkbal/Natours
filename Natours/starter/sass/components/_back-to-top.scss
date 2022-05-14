@@ -1,8 +1,10 @@
 .back-to-the-top {
     position: relative;
+
+    @include respond(tab-land) {display: none;}
     
     &__button {
-        background-color: $color-grey;
+        background-color: $color-primary-dark;
         height: 7rem;
         width: 7rem;
         position: fixed;

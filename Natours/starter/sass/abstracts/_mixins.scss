@@ -25,6 +25,8 @@
 1200px - 1800px:    is where our normal styles apply
 1800px +:           Big desktop
 
+ORDER: Base + typography > general layout + grid > page layout > components
+
 1em = 16px
 */
 
@@ -32,10 +34,10 @@
     @if $breakpoint == phone {
         @media (max-width: 37.5em) { @content }; // 37.5em = 600px
     }
-    @if $breakpoint == tab-land {
+    @if $breakpoint == tab-port {
         @media (max-width: 56.25em) { @content }; // 56.25em = 900px
     }
-    @if $breakpoint == tab-port {
+    @if $breakpoint == tab-land {
         @media (max-width: 75em) { @content }; // 75em = 1200px
     }
     @if $breakpoint == big-desktop {
