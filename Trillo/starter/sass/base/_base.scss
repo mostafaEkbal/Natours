@@ -19,9 +19,11 @@
 }
 
 //SCREEN SIZE VARIABLES
-$br-largest: 75em; // 1200px
-$br-large: 68.75em; // 1100px
-$br-medium: 56.25em; // 900px
+$br-largest: 75em;         // 1200px
+$br-large: 68.75em;       // 1100px
+$br-medium: 56.25em;     // 900px
+$br-small: 37.5em;      // 600px
+$br-smallest: 31.25em; // 500px
 
 * {
     margin: 0;
@@ -37,7 +39,7 @@ $br-medium: 56.25em; // 900px
 html {
     box-sizing: border-box;
     font-size: 62.5%;
-
+    
     @media only screen and (max-width: $br-large) {
         font-size: 50%; // 8px
     }
