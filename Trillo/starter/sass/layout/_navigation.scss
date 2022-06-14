@@ -2,12 +2,27 @@
     font-size: 1.4rem;
     list-style: none;
     margin-top: 3.5rem;
+    
+    @media only screen and (max-width: $br-medium) {
+        display: flex;
+        margin: 0;
+    }
+
     &__item {
         position: relative;
-
+        
         &:not(:last-child) {
             margin-bottom: .5rem;
+
+            @media only screen and (max-width: $br-medium) {
+                margin: 0;
+            }
         }
+
+        @media only screen and (max-width: $br-medium) {
+            flex: 1;
+        }
+
     }
 
     &__item::before {
@@ -46,6 +61,11 @@
 
         display: flex;
         align-items: center;
+
+        @media only screen and (max-width: $br-medium) {
+            justify-content: center;
+            padding: 2rem;
+        }
     }
 
     &__icon {
@@ -62,4 +82,8 @@
     color: var(--color-grey-light-4);
     text-align: center;
     padding: 2.5rem;
+
+    @media only screen and (max-width: $br-medium) {
+        display: none;
+    }
 }
