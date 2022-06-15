@@ -5,3 +5,7 @@ node_modules/
 .env
 *error.log
 *debug.log*
+
+package-lock.json
+
+package.json
