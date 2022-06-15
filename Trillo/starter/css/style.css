@@ -437,12 +437,36 @@ body {
   .user-nav__user-menu {
     position: absolute;
     width: 100%;
-    height: 0;
-    background-color: var(--color-grey-light-4);
+    max-height: 0;
+    background-color: var(--color-grey-light-2);
     top: 100%;
-    transition: all 400ms 200ms; }
+    border-radius: 3px;
+    transition: max-height 900ms 200ms; }
   .user-nav__user:hover > .user-nav__user-menu {
-    height: 20rem; }
+    max-height: 50rem; }
+  .user-nav__list {
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 900ms 200ms; }
+  .user-nav__user:hover > .user-nav__user-menu > .user-nav__list {
+    opacity: 1;
+    visibility: visible; }
+  .user-nav__item:not(:last-child) {
+    border-bottom: 0.5px solid var(--color-grey-light-3); }
+  .user-nav__item:hover {
+    background-color: var(--color-grey-light-1); }
+  .user-nav__link:link, .user-nav__link:visited {
+    color: var(--color-grey-dark-2);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 1rem;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
 
 .side-nav {
   font-size: 1.4rem;
