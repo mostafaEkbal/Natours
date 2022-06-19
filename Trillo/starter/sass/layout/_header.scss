@@ -9,6 +9,7 @@
 ///////////////////////////////
 // SEARCH
 .search {
+    position: relative;
     flex: 0 0 40%;
 
     display: flex;
@@ -47,6 +48,37 @@
     &__input:focus + &__button {
         background-color: var(--color-grey-light-3);
     }
+
+    &__input:focus ~ &__results {
+        display: block;
+    }
+
+    &__results {
+        background-color: var(--color-grey-light-3);
+        width: 100%;
+        position: absolute;
+        top: 3.3rem;
+        left: .5rem;
+        display: none;
+        overflow: hidden;
+
+        & li {
+            list-style: none;
+            font-size: 1.4rem;
+            color: #000;
+            padding: .5rem 1rem;
+            cursor:default;
+            
+            &:not(:last-child) {
+                border-bottom: var(--line);
+            }
+
+            &:hover {
+                background-color: var(--color-grey-light-4);
+            }
+        }
+    }
+
 
     &__button {
         border: none;
@@ -179,4 +211,9 @@
         flex-direction: column;
         align-items: center;
     }
+}
+
+.not-active {
+    opacity: 0;
+    visibility: hidden;
 }
