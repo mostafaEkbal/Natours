@@ -1,31 +1,6 @@
 const searchInput = document.querySelector('#search-input');
-
-searchInput.addEventListener('keyup', (e) => {
-    const searchTerm = e.target.value;
-    const searchResults = document.querySelector('#search-results');
-    searchResults.innerHTML = '';
-    
-    suggestions.forEach(suggestion => {
-        if (searchTerm === '') {
-            searchResults.innerHTML = '';
-        }
-        else if (suggestion.toLowerCase().indexOf(searchTerm.toLowerCase()) != -1) {
-            searchResults.innerHTML += `<li>${suggestion}</li>`;
-        }
-    })
-    const searchResultsList = document.querySelectorAll('#search-results li');
-
-    searchResultsList.forEach(li => {
-        li.addEventListener('click', (e) => {
-            console.log(li.textContent);
-            searchResultsList.innerHTML = '';
-        })
-    })
-    e.preventDefault();
-});
-
-
-
+const searchResults = document.querySelector('#search-results');
+let searchResultsList = [];
 
 const suggestions = [
     'apple',
@@ -55,6 +30,35 @@ const suggestions = [
     'mandarin',
     'nectarine'
 ]
+
+searchInput.addEventListener('input', (e) => {
+    const searchTerm = e.target.value;
+    searchResults.innerHTML = '';
+    
+    suggestions.forEach(suggestion => {
+        if (suggestion.toLowerCase().indexOf(searchTerm.toLowerCase()) != -1) {
+            searchResults.innerHTML += `<li>${suggestion}</li>`;
+        }
+    });
+
+    searchResultsList = document.querySelectorAll('#search-results li');
+    searchResultsList.forEach(li => {
+        li.addEventListener('click', (e) => {
+            let liText = li.textContent;
+            searchInput.value = liText;
+            e.preventDefault();
+        });
+    });
+
+    
+    /* e.preventDefault(); */
+});
+
+
+
+
+
+
 
 
 
