@@ -392,6 +392,7 @@ body {
     left: .5rem;
     opacity: 0;
     overflow: hidden;
+    z-index: 100;
     transition: opacity 200ms; }
     .search__results li {
       list-style: none;
