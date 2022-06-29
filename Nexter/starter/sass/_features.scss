@@ -1,25 +1,29 @@
 .features {
-    background-color: $color-grey-light-2;
     grid-column: center-start / center-end;
 
     margin: 15rem 0;
 
     display: grid;
-    grid-template-columns: subgrid;
-    row-gap: 6rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem , 1fr));
+    gap: 6rem;
+    align-items: start;
 }
 
 .feature {
-    
-    &--1 {
-        grid-column: center-start / span 2;
+    display: grid;
+    grid-template-columns: min-content minmax(min-content, 1fr);
+    row-gap: 1.5rem;
+    column-gap: 2.5rem;
+
+    &__icon {
+        fill: $color-primary;
+        width: 4.5rem;
+        height: 4.5rem;
+        grid-row: 1 / span 2;
+        transform: translateY(-1rem);
     }
 
-    &--2 {
-        grid-column: col-start 4 / span 2;
-    }
-
-    &--3 {
-        grid-column: col-start 7 / span 2;
+    &__text {
+        font-size: 1.7rem;
     }
 }
