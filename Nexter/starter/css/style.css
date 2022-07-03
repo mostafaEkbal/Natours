@@ -209,10 +209,26 @@ body {
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(7, 5vw);
   gap: 1.5rem;
-  padding: 1.5rem; }
-  .gallery__item--1 {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2; }
+  padding: 1.5rem;
+  grid-auto-flow: row dense; }
+  .gallery__item--small-rectangle {
+    grid-column: span 1;
+    grid-row: span 1; }
+  .gallery__item--rectangle {
+    grid-column: span 2;
+    grid-row: span 2; }
+  .gallery__item--big-rectangle {
+    grid-column: span 3;
+    grid-row: span 3; }
+  .gallery__item--tall-rectangle {
+    grid-column: span 1;
+    grid-row: span 3; }
+  .gallery__item--square {
+    grid-column: span 1;
+    grid-row: span 2; }
+  .gallery__item--big-square {
+    grid-column: span 2;
+    grid-row: span 3; }
   .gallery__img {
     width: 100%;
     height: 100%;
