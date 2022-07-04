@@ -121,8 +121,25 @@ body {
   .header__btn {
     align-self: start;
     justify-self: start; }
-  .header__seenon-logos img {
-    height: 2.5rem; }
+  .header__seenon-text {
+    font-size: 1.6rem;
+    color: #aaa;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .header__seenon-text::before, .header__seenon-text::after {
+      content: "";
+      height: 1px;
+      flex: 0 0 45%;
+      background-color: currentColor;
+      display: block; }
+  .header__seenon-logos {
+    margin: 0 5rem;
+    display: flex;
+    gap: 10rem; }
+    .header__seenon-logos img {
+      height: 2.5rem;
+      filter: brightness(70%); }
 
 .realtors {
   background-color: #101d2c;

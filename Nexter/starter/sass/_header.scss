@@ -24,13 +24,32 @@
     }
 
     &__seenon-text {
+        font-size: 1.6rem;
+        color: $color-grey-light-2;
 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &::before,
+        &::after {
+            content: "";
+            height: 1px;
+            flex: 0 0 45%;
+            background-color: currentColor;
+            display: block;
+            
+        }
     }
 
     &__seenon-logos {
-         
+        margin: 0 5rem;
+        display: flex; 
+        gap: 10rem;
+
         img {
             height: 2.5rem;
+            filter: brightness(70%);
         }
     }
 }
