@@ -1,67 +1,81 @@
 .back-to-the-top {
+  position: relative;
+
+  @include respond(tab-land) {
+    display: none;
+  }
+
+  &__button {
+    background-color: $color-primary;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    border-radius: 50%;
+    bottom: 6rem;
+    right: 6rem;
+    z-index: 2000;
+    box-shadow: 0.1rem 0.2rem 3rem rgba($color-black, 0.3);
+    text-align: center;
+    cursor: pointer;
+    transition: box-shadow 200ms, scale 100ms;
+
+    &:hover {
+      box-shadow: 0.1rem 0.2rem 3rem rgba($color-black, 0.4);
+    }
+
+    &:active {
+      box-shadow: 0.1rem 0.2rem 3rem rgba($color-black, 0.3);
+      scale: 0.97;
+    }
+  }
+
+  &__icon {
     position: relative;
+    margin-top: 3.5rem;
 
-    @include respond(tab-land) {display: none;}
-    
-    &__button {
-        background-color: $color-primary-dark;
-        height: 7rem;
-        width: 7rem;
-        position: fixed;
-        border-radius: 50%;
-        bottom: 6rem;
-        right: 6rem;
-        z-index: 2000;
-        box-shadow: 0 1rem 3rem rgba($color-black, .1c);
-        text-align: center;
-        cursor: pointer;
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $color-grey-dark-2;
+      display: inline-block;
+      transition: all 0.2s;
     }
 
-    &__icon {
-        position: relative;
-        margin-top: 3.5rem;
-
-        &,
-        &::before,
-        &::after {
-        width: 3rem;
-        height: 2px;
-        background-color: $color-grey-dark-2;
-        display: inline-block;
-        transition: all .2s;
-        
-        }
-
-        &::after,
-        &::before {
-            content: '';
-            width: 2rem;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        & {
-            transform: rotate(90deg);
-        }
-
-        &::before {
-            transform-origin: left;
-            transform: rotate(45deg);   
-        }
-
-        &::after {
-            transform-origin: left;
-            transform: rotate(-45deg);  
-        }
+    &::after,
+    &::before {
+      content: '';
+      width: 2rem;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
 
-    &__button:hover &__icon {
-        transform: translatey(-.5rem) rotate(90deg);
+    & {
+      transform: rotate(90deg);
     }
+
+    &::before {
+      transform-origin: left;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform-origin: left;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__button:hover &__icon {
+    transform: translatey(-0.5rem) rotate(90deg);
+  }
+
+  &__button:active > &__icon {
+    transform: translatey(-0.2rem) rotate(90deg);
+  }
 }
 
-
 .hide {
-    display: none;
+  display: none;
 }
