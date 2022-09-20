@@ -1,0 +1,37 @@
+{
+  "name": "node-packages",
+  "version": "1.0.0",
+  "description": "node is pretty cool",
+  "main": "index.js",
+  "scripts": {
+    "start:sass": "node-sass marvel-api-website/sass/main.scss marvel-api-website/public/css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss public/css/style.comp.css",
+    "watch:sass": "node-sass sass/main.scss public/css/style.comp.css -w",
+    "concat:css": "concat -o public/css/style.concat.css  public/css/icon-fonts.css public/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' public/css/style.concat.css -o public/css/style.prefix.css",
+    "compress:css": "cleancss -o public/css/style.css public/css/style.prefix.css",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css",
+    "build": "browserify app.js -o bundle.js",
+    "devStart": "nodemon weather-journal-app/server.js"
+  },
+  "author": "Mostafa",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "browserify": "^17.0.0",
+    "concat": "^1.0.3",
+    "express": "^4.17.3",
+    "firebase": "^9.9.0",
+    "node-sass": "^7.0.0",
+    "nodemon": "^2.0.15",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^9.1.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "react-icons": "^4.4.0",
+    "reactstrap": "^9.1.3",
+    "requirejs": "^2.3.6",
+    "sax": "^1.2.4"
+  }
+}
