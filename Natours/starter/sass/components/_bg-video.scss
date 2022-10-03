@@ -1,15 +1,17 @@
 .bg-video {
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  opacity: 0.15;
+
+  &__content {
     height: 100%;
     width: 100%;
-    z-index: -2;
-    opacity: .15;
-
-    &__content {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
+    object-fit: contain;
+  }
 }
